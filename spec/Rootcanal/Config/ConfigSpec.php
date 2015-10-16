@@ -43,8 +43,8 @@ class ConfigSpec extends ObjectBehavior
         $this->getPaths()->shouldHaveValue(getcwd() . '/www/sites/all/modules/%s');
         $this->getPaths()->shouldHaveKey('theme');
         $this->getPaths()->shouldHaveValue(getcwd() . '/www/sites/all/themes/%s');
-        $this->getPaths()->shouldHaveKey('drush');
-        $this->getPaths()->shouldHaveValue(getcwd() . '/www/sites/all/drush/%s');
+        // $this->getPaths()->shouldHaveKey('drush');
+        // $this->getPaths()->shouldHaveValue(getcwd() . '/www/sites/all/drush/%s');
         $this->getPaths()->shouldHaveKey('profile');
         $this->getPaths()->shouldHaveValue(getcwd() . '/www/profiles/%s');
         $this->getPaths()->shouldHaveKey('files-public');
@@ -72,7 +72,7 @@ class ConfigSpec extends ObjectBehavior
         $this->getPathsByType('core')->shouldReturn(getcwd() . '/www');
         $this->getPathsByType('module')->shouldReturn(getcwd() . '/www/sites/all/modules/%s');
         $this->getPathsByType('theme')->shouldReturn(getcwd() . '/www/sites/all/themes/%s');
-        $this->getPathsByType('drush')->shouldReturn(getcwd() . '/www/sites/all/drush/%s');
+        // $this->getPathsByType('drush')->shouldReturn(getcwd() . '/www/sites/all/drush/%s');
         $this->getPathsByType('profile')->shouldReturn(getcwd() . '/www/profiles/%s');
         $this->getPathsByType('files-public')->shouldReturn(getcwd() . '/www/sites/default/files');
         $this->getPathsByType('files-private')->shouldReturn(getcwd() . '/www/sites/default/files-private');
